@@ -39,7 +39,6 @@ public class Server {
 
                 if (selectionKey.isReadable()) {
                     System.out.println("New selector readable event");
-//                    System.out.println("New message: " + readMessage(selectionKey) + "Thread name: " + Thread.currentThread().getName());
                     readMessage(selectionKey);
                     writeMessage(selectionKey, readMessage(selectionKey));
                 }
